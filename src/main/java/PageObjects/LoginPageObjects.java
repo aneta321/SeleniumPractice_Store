@@ -15,7 +15,6 @@ public class LoginPageObjects extends BasePage {
 
 
     public static final String EMAIL_ADDRESS_CREATE = "aneta321@gmail.com";
-    public static final String LOGIN_PAGE_TITLE = "Login - My Store";
 
     @FindBy(xpath = "//input[@id = 'email_create']")
     public WebElement emailAddressCreateInput;
