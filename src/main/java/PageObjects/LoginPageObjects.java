@@ -15,6 +15,8 @@ public class LoginPageObjects extends BasePage {
 
 
     public static final String EMAIL_ADDRESS_CREATE = "aneta321@gmail.com";
+    //Registration Form
+    public static final String FIRST_NAME = "Aneta";
 
     @FindBy(xpath = "//input[@id = 'email_create']")
     public WebElement emailAddressCreateInput;
@@ -30,6 +32,15 @@ public class LoginPageObjects extends BasePage {
 
     @FindBy(xpath = "//button[@type = 'submit']")
     public WebElement buttonSignIn;
+
+    //Create An Account
+    @FindBy(xpath = "//input[@id='id_gender2']")
+    public WebElement mrsGender;
+
+    @FindBy(xpath = "//input[@name='customer_firstname']")
+    public WebElement firstName;
+
+
 
 
 }

@@ -1,6 +1,5 @@
 import PageActions.LoginPageActions;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static PageObjects.HomePageObjects.LOGIN_PAGE_TITLE;
@@ -24,5 +23,12 @@ public class LoginPageTests extends BaseTests {
         LoginPageActions loginPageActions = new LoginPageActions(driver, wait);
         wait.until(ExpectedConditions.visibilityOf(loginPageActions.buttonCreateAccount));
         loginPageActions.fillEmailAddressCreate().createAnAccountClick();
+    }
+
+    @Test
+    @Order(3)
+    public void fillTheForm() {
+        LoginPageActions loginPageActions = new LoginPageActions(driver, wait);
+        loginPageActions.fillRegistrationForm();
     }
 }

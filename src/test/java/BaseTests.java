@@ -1,4 +1,5 @@
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +24,7 @@ public class BaseTests {
 
         driver.manage().window().setSize(new Dimension(1290, 730));
         driver.manage().window().setPosition(new Point(8, 30));
-        wait = new WebDriverWait(driver, 1);
+        wait = new WebDriverWait(driver, 2);
         driver.navigate().to("http://automationpractice.com/index.php");
     }
 
