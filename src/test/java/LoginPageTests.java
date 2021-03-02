@@ -1,8 +1,8 @@
 import PageActions.LoginPageActions;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static PageObjects.HomePageObjects.LOGIN_PAGE_TITLE;
+import static PageObjects.LoginPageObjects.MY_ACCOUNT_URL;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LoginPageTests extends BaseTests {
@@ -21,7 +21,6 @@ public class LoginPageTests extends BaseTests {
     @Order(2)
     public void createAnAccount() {
         LoginPageActions loginPageActions = new LoginPageActions(driver, wait);
-        wait.until(ExpectedConditions.visibilityOf(loginPageActions.buttonCreateAccount));
         loginPageActions.fillEmailAddressCreate().createAnAccountClick();
     }
 
@@ -30,5 +29,6 @@ public class LoginPageTests extends BaseTests {
     public void fillTheForm() {
         LoginPageActions loginPageActions = new LoginPageActions(driver, wait);
         loginPageActions.fillRegistrationForm();
+        Assertions.assertEquals(MY_ACCOUNT_URL, driver.getCurrentUrl(), "URL is not " + MY_ACCOUNT_URL);
     }
 }

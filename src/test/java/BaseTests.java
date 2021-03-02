@@ -24,7 +24,7 @@ public class BaseTests {
 
         driver.manage().window().setSize(new Dimension(1290, 730));
         driver.manage().window().setPosition(new Point(8, 30));
-        wait = new WebDriverWait(driver, 2);
+        wait = new WebDriverWait(driver, 5);
         driver.navigate().to("http://automationpractice.com/index.php");
     }
 
