@@ -32,13 +32,14 @@ public class LoginPageActions extends LoginPageObjects {
         return new LoginPageActions(driver, wait);
     }
 
+
     public LoginPageActions fillRegistrationForm() {
         Actions action = new Actions(driver);
 
         action.click(mrsGenderRadioButton).build().perform();
         firstNameInput.sendKeys(FIRST_NAME);
         lastNameInput.sendKeys(LAST_NAME);
-        passwordCreateInput.sendKeys(PASSWORD);
+        passwordCreateInput.sendKeys(PASSWORD_CREATE);
 
         Select selectDay = new Select(dayOfBirth);
         selectDay.selectByValue("3");
@@ -71,6 +72,17 @@ public class LoginPageActions extends LoginPageObjects {
 
         return new LoginPageActions(driver, wait);
 
+    }
 
+    public LoginPageActions signOut() {
+        signOutbutton.click();
+        return new LoginPageActions(driver, wait);
+    }
+
+    public LoginPageActions signIn() {
+        emailAddressLoginInput.sendKeys(EMAIL_ADDRESS_LOGIN);
+        passwordLoginInput.sendKeys(PASSWORD_LOGIN);
+        signInButton.click();
+        return new LoginPageActions(driver, wait);
     }
 }

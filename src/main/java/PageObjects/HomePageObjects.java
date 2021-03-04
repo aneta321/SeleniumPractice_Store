@@ -14,8 +14,8 @@ public class HomePageObjects extends BasePage {
         super(driver, wait);
     }
 
-    public static final String HOME_PAGE_TITLE = "My Store";
-    public static final String LOGIN_PAGE_TITLE = "Login - My Store";
+    public static final String HOME_PAGE_URL = "http://automationpractice.com/index.php";
+    public static final String LOGIN_PAGE_URL = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
 
 
     @FindBy(xpath = "//a[@title=\"Log in to your customer account\"]")
