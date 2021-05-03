@@ -14,7 +14,7 @@ public class LoginPageObjects extends BasePage {
     }
 
 
-    public static final String EMAIL_ADDRESS_CREATE = "aneta39928800000000511@gmail.com";
+    public static final String EMAIL_ADDRESS_CREATE = "aneta39928800000000000511@gmail.com";
     //Registration Form
     public static final String FIRST_NAME = "Aneta";
     public static final String LAST_NAME = "Pasik";
