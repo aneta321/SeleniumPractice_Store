@@ -22,7 +22,8 @@ public class BaseTests {
         driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-        driver.manage().window().setSize(new Dimension(1290, 730));
+        //driver.manage().window().setSize(new Dimension(1290, 730));
+        driver.manage().window().setSize(new Dimension(1900, 900));
         driver.manage().window().setPosition(new Point(8, 30));
         wait = new WebDriverWait(driver, 5);
         driver.navigate().to("http://automationpractice.com/index.php");

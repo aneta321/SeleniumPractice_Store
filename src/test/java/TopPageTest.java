@@ -19,6 +19,13 @@ public class TopPageTest extends BaseTests {
         loginPageActions.signIn();
         Assertions.assertEquals(LOGIN_CONFIRM_URL, driver.getCurrentUrl(), "The url is not\" + LOGIN_CONFIRM_URL");
     }
+
+    @Test
+    @Order(2)
+    public void chooseTops() {
+        TopPageActions topPageActions = new TopPageActions(driver, wait);
+        topPageActions.chooseWomenCard();
+    }
 }
 
 
